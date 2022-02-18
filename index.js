@@ -38,22 +38,22 @@ let arrayOfNumbersRepeatedWords = Object.values(sortWordsByUse);
 let arrayOfMostRepeatedWordsByOrderOfUse = Object.keys(sortWordsByUse);
 let sumOfRepeatedWordsByOrder = 0;
 
-eighteenPerCent = (80 * totalBookWords) / 100;
+eightyPercent = (80 * totalBookWords) / 100;
 
-let listOfTwentyPercentOfWordsToUnderstand = [];
+let listOfEightyPercentOfWordsToUnderstand = [];
 
 for (let i = 0; i < totalBookWords; i++) {
   sumOfRepeatedWordsByOrder += arrayOfNumbersRepeatedWords[i];
-  listOfTwentyPercentOfWordsToUnderstand = [
-    ...listOfTwentyPercentOfWordsToUnderstand,
+  listOfEightyPercentOfWordsToUnderstand = [
+    ...listOfEightyPercentOfWordsToUnderstand,
     arrayOfMostRepeatedWordsByOrderOfUse[i],
   ];
-  if (sumOfRepeatedWordsByOrder >= eighteenPerCent) break;
+  if (sumOfRepeatedWordsByOrder >= eightyPercent) break;
 }
 
 console.log(
   "El ochecnta por ciento de las palabras del libro son",
-  eighteenPerCent
+  eightyPercent
 );
 
 console.log(
@@ -64,10 +64,10 @@ console.log(
 
 console.log(
   "El numero de palabras para entender el 80% de libro a entender es",
-  listOfTwentyPercentOfWordsToUnderstand.length
+  listOfEightyPercentOfWordsToUnderstand.length
 );
 let totalPercentajeOfWordsToUnderstand =
-  (listOfTwentyPercentOfWordsToUnderstand.length * 100) /
+  (listOfEightyPercentOfWordsToUnderstand.length * 100) /
   arrayOfNumbersRepeatedWords.length;
 
 console.log(
@@ -76,5 +76,5 @@ console.log(
 );
 console.log(
   `Ese ${totalPercentajeOfWordsToUnderstand.toFixed(2)}% es`,
-  listOfTwentyPercentOfWordsToUnderstand
+  listOfEightyPercentOfWordsToUnderstand
 );
