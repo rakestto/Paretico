@@ -10,9 +10,7 @@ try {
 
 const totalBookWords = getWords(libro).length;
 const arrayOfBookWords = getWords(libro);
-const twentyPercentWords = (totalBookWords * 20) / 100;
 let listOfRepeatedWords = {};
-let totalUsedWords = 0;
 
 function getWords(text) {
   let x = text.replace(/[^A-Za-z]+/g, " ");
